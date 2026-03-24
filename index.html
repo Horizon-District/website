@@ -1,1 +1,1214 @@
-Hi 
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Horizon District — FiveM Roleplay Server</title>
+  <meta name="description"
+    content="Horizon District — Der neue deutsche FiveM Roleplay Server. Realistische Wirtschaft, Custom Cars, starke Community. Jetzt beitreten." />
+  <meta property="og:title" content="Horizon District — FiveM RP" />
+  <meta property="og:description" content="Erlebe Roleplay auf einem neuen Level. Horizon District kommt bald." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- CCTV corner badge -->
+  <div id="cctv-badge">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="3" />
+      <path
+        d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+    </svg>
+    <span>CCTV AKTIV</span>
+    <span id="cctv-time"></span>
+  </div>
+
+  <!-- ══════════════════════ NAVBAR ══════════════════════ -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="Horizon District Logo" class="nav-logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="nav-logo-fallback">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="8" width="10" height="16" stroke="#1A9FFF" stroke-width="2" fill="none" />
+            <rect x="18" y="8" width="10" height="16" stroke="#1A9FFF" stroke-width="2" fill="none" />
+            <rect x="11" y="12" width="10" height="8" stroke="#FF6B1A" stroke-width="1.5" fill="none" />
+          </svg>
+        </div>
+        <span class="nav-brand">Horizon<span class="nav-brand-accent">District</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#status">Server</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#cars">Cars</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#join">Beitreten</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener" class="btn-discord"
+          aria-label="Discord beitreten">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+          </svg>
+          Discord
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Menü öffnen">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════ HERO ══════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="circuit-pattern"></div>
+      <div class="hero-glow-left"></div>
+      <div class="hero-glow-right"></div>
+      <div class="scan-line"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>📡 DISPATCH — Bald verfügbar</span>
+      </div>
+
+      <div class="hero-logo-wrap">
+        <img src="logo.png" alt="Horizon District" class="hero-logo" onerror="this.style.display='none';" />
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-line">HORIZON</span>
+        <span class="hero-title-accent">DISTRICT</span>
+      </h1>
+      <p class="hero-sub">Der neue deutsche FiveM Roleplay Server.<br />Immersive Wirtschaft · Custom Fahrzeuge · Echte
+        Community</p>
+
+      <div class="hero-cta">
+        <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+          </svg>
+          Discord beitreten
+        </a>
+        <a href="#join" class="btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
+          Wie joinen?
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-value" id="stat-players">—</span>
+          <span class="stat-label">Spieler online</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-value" id="stat-status">In Bau</span>
+          <span class="stat-label">Server Status</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-value" style="color: var(--hd-orange);" id="stat-discord-count">—</span>
+          <span class="stat-label">Discord Mitglieder</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="stat-value" style="color: var(--hd-blue);" id="stat-cars">150+</span>
+          <span class="stat-label">Custom Cars</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SERVER STATUS ══════════════════════ -->
+  <section id="status" class="section">
+    <div class="container">
+      <div class="section-label">DISPATCH — LIVE STATUS</div>
+      <h2 class="section-title">Server <span class="text-blue">Übersicht</span></h2>
+
+      <div class="status-grid">
+        <div class="status-card status-main">
+          <div class="status-indicator" id="server-indicator">
+            <div class="status-dot offline"></div>
+            <span id="server-status-text">In Entwicklung</span>
+          </div>
+          <h3 class="status-server-name">Horizon District | FiveM RP</h3>
+          <p class="status-server-desc">Einheit HD-01 — Einsatzbereit sobald Server live geht</p>
+          <div class="status-meta">
+            <div class="status-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <span id="player-count">0 / 0</span>
+              <span>Spieler</span>
+            </div>
+            <div class="status-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <span>FiveM RP</span>
+            </div>
+            <div class="status-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+              <span>Deutschland</span>
+            </div>
+          </div>
+          <!-- CFX Connect Button — trägt den Code ein sobald Server live ist -->
+          <button class="btn-connect" id="connect-btn" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Server connecten
+          </button>
+          <p class="connect-note" id="connect-note">Server ist noch nicht live — bald verfügbar!</p>
+        </div>
+
+        <div class="status-sidebar">
+          <div class="status-info-card">
+            <div class="status-info-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <h4>Whitelist System</h4>
+            <p>Bewerbung über Discord — kontrollierte Community</p>
+          </div>
+          <div class="status-info-card">
+            <div class="status-info-icon orange">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            </div>
+            <h4>Custom Framework</h4>
+            <p>Eigenentwickelte Systeme von Staubi & Team</p>
+          </div>
+          <div class="status-info-card">
+            <div class="status-info-icon blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                <path d="M2 17l10 5 10-5" />
+                <path d="M2 12l10 5 10-5" />
+              </svg>
+            </div>
+            <h4>Custom Cars</h4>
+            <p>Handverlesene Fahrzeuge von Car-Dev Devin</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FEATURES ══════════════════════ -->
+  <section id="features" class="section section-alt">
+    <div class="container">
+      <div class="section-label">WAS UNS AUSMACHT</div>
+      <h2 class="section-title">Server <span class="text-orange">Features</span></h2>
+      <p class="section-sub">Alles was ein erstklassiger RP-Server braucht — und mehr.</p>
+
+      <div class="features-grid">
+        <div class="feature-card feature-large">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="1" y="3" width="15" height="13" rx="1" />
+              <path d="M16 8h4l3 4" />
+              <path d="M19 12v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <h3>Custom Fahrzeuge</h3>
+          <p>Handverlesene Custom Cars, Motorräder und Sonderfahrzeuge — entwickelt und optimiert von Car-Dev Devin.
+            Jedes Fahrzeug performant und detailliert.</p>
+          <div class="feature-tag">Car Dev: Devin</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <line x1="12" y1="1" x2="12" y2="23" />
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+          </div>
+          <h3>Realistische Wirtschaft</h3>
+          <p>Eigenständiges Finanzsystem mit Banken, Investing und Schwarzmarkt.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>
+          </div>
+          <h3>Custom Jobs</h3>
+          <p>Legale & illegale Berufe mit tiefen RP-Mechaniken und Progression.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <h3>Immobilien System</h3>
+          <p>Kaufe, miete und verkaufe Häuser, Garages und Businesses.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <h3>Whitelist Community</h3>
+          <p>Kontrollierte Aufnahme per Bewerbung — Qualität vor Quantität.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <h3>Anti-Cheat System</h3>
+          <p>Modernes Anti-Cheat für ein faires Spielerlebnis aller Beteiligten.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3>Eigene UI Systeme</h3>
+          <p>Komplett eigene HUD & Menü-Interfaces — entwickelt von Staubi.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3>Aktives Team</h3>
+          <p>Dediziertes Support-Team und aktive Entwicklung für euch rund um die Uhr.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ JOBS & FRAKTIONEN ══════════════════════ -->
+  <section id="jobs" class="section">
+    <div class="container">
+      <div class="section-label">DEIN LEBEN</div>
+      <h2 class="section-title">Jobs &amp; <span class="text-orange">Fraktionen</span></h2>
+      <p class="section-sub">Ob Staatsdiener oder Straßenkrimineller — dein Weg, deine Regeln.</p>
+
+      <div class="jobs-tabs">
+        <button class="jobs-tab active" data-tab="legal" id="tab-legal">🏛️ Legal</button>
+        <button class="jobs-tab" data-tab="illegal" id="tab-illegal">💀 Illegal</button>
+      </div>
+
+      <div class="jobs-panel" id="panel-legal">
+        <div class="jobs-grid">
+          <div class="job-card">
+            <div class="job-icon job-blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag">Staatlich</span>
+              <h3>LSPD</h3>
+              <p>Los Santos Police Department. Halte Ordnung, verfolge Kriminelle, schütze die Bürger. Mit echter
+                Befehlsstruktur & Rangsystem.</p>
+            </div>
+            <div class="job-slots"><span>∞</span><small>Offen</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-red">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <path d="M12 22V12" />
+                <path d="M9 12h6" />
+                <circle cx="12" cy="8" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag">Staatlich</span>
+              <h3>LSEMS</h3>
+              <p>Rettungsdienst & Notarzt. Jedes Leben zählt. Reagiere auf Notrufe, behandle Verletzte und bringe sie
+                ins Krankenhaus.</p>
+            </div>
+            <div class="job-slots"><span>∞</span><small>Offen</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-orange">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+                <path d="M4.93 4.93a10 10 0 0 0 0 14.14" />
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                <path d="M8.46 8.46a5 5 0 0 0 0 7.07" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag">Freelance</span>
+              <h3>Mechaniker</h3>
+              <p>Repariere Fahrzeuge, pimpe Custom Cars und führe eine eigene Werkstatt. Mit Tuning-System und
+                Fahrzeughandel.</p>
+            </div>
+            <div class="job-slots"><span>∞</span><small>Offen</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="1" y="3" width="15" height="13" rx="1" />
+                <path d="M16 8h4l3 4" />
+                <path d="M19 12v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag">Freelance</span>
+              <h3>Taxifahrer</h3>
+              <p>Chauffiere Spieler durch Los Santos. Lerne die Stadt kennen und verdiene solides Geld — ideal für
+                Einsteiger.</p>
+            </div>
+            <div class="job-slots"><span>∞</span><small>Offen</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-orange">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag">Business</span>
+              <h3>Händler</h3>
+              <p>Eröffne deinen eigenen Shop, handele Waren und baue ein Wirtschaftsimperium auf. Immobilien und
+                Investitionen inklusive.</p>
+            </div>
+            <div class="job-slots"><span>∞</span><small>Offen</small></div>
+          </div>
+          <div class="job-card job-card-soon">
+            <div class="job-icon job-muted">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag soon">Bald</span>
+              <h3>Anwalt</h3>
+              <p>Verteitige Angeklagte vor dem Richter. Ein eigenes Rechtssystem kommt mit dem nächsten Update.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jobs-panel hidden" id="panel-illegal">
+        <div class="jobs-grid">
+          <div class="job-card">
+            <div class="job-icon job-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag illegal">Gang</span>
+              <h3>Straßengang</h3>
+              <p>Kontrolliere Bezirke, führe Drogenrouten aus und sichere deinen Einflussbereich. Turf Wars mit anderen
+                Gangs möglich.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="7" width="20" height="14" rx="2" />
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag illegal">Organisiert</span>
+              <h3>Schwarzmarkt</h3>
+              <p>Schmuggle Waren, verhandle mit Käufern und beliefere den Untergrund. Hochrisiko, hohe Belohnung.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag illegal">Freelance</span>
+              <h3>Hacker</h3>
+              <p>Knacke Sicherheitssysteme, stehle Bankdaten oder sabotiere feindliche Operationen. Technologische
+                Überlegenheit als Waffe.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag illegal">Organisiert</span>
+              <h3>Bankraub</h3>
+              <p>Plane und führe Raubüberfälle durch — vom kleinen Kiosk bis zur Fleeca Bank. Benötigt Planung, Team &
+                Nerven.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+          <div class="job-card">
+            <div class="job-icon job-purple">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag illegal">Freelance</span>
+              <h3>Drogenhandel</h3>
+              <p>Produziere und verticke Substanzen auf dem Schwarzmarkt. Wachse zur Unterwelt-Legende auf.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+          <div class="job-card job-card-soon">
+            <div class="job-icon job-muted">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+              </svg>
+            </div>
+            <div class="job-info">
+              <span class="job-tag soon">Bald</span>
+              <h3>Mafia</h3>
+              <p>Eine eigene Fraktion mit eigener Hierarchie. Bald verfügbar — nur für ausgewählte Spieler.</p>
+            </div>
+            <div class="job-slots"><span>?</span><small>Bald</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TEAM ══════════════════════ -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-label">DIE MACHER</div>
+      <h2 class="section-title">Das <span class="text-blue">Team</span></h2>
+      <p class="section-sub">Hinter Horizon District stecken echte Köpfe mit echtem Einsatz.</p>
+
+      <div class="team-grid">
+        <div class="team-card team-owner">
+          <div class="team-avatar">
+            <div class="team-avatar-inner">xB</div>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-badge owner">Owner</span>
+            <h3 class="team-name">xBerry</h3>
+            <p class="team-desc">Gründer und Visionär hinter Horizon District. Verantwortlich für die Gesamtausrichtung
+              des Servers.</p>
+          </div>
+        </div>
+
+        <div class="team-card team-dev">
+          <div class="team-avatar">
+            <div class="team-avatar-inner">St</div>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-badge dev">Main Developer</span>
+            <h3 class="team-name">Staubi</h3>
+            <p class="team-desc">Hauptentwickler des Servers. Baut alle custom Scripts, Frameworks und UI-Systeme.</p>
+          </div>
+        </div>
+
+        <div class="team-card team-cardev">
+          <div class="team-avatar">
+            <div class="team-avatar-inner">Dv</div>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-badge cardev">Car Developer</span>
+            <h3 class="team-name">Devin</h3>
+            <p class="team-desc">Fahrzeugentwickler und Optimierer. Sorgt für authentische, performante Custom Cars.</p>
+          </div>
+        </div>
+
+        <div class="team-card team-lead">
+          <div class="team-avatar">
+            <div class="team-avatar-inner">KA</div>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-badge lead">Teamleitung</span>
+            <h3 class="team-name">KratomAtom</h3>
+            <p class="team-desc">Leitet das Team und koordiniert zwischen Entwicklung, Support und Community.</p>
+          </div>
+        </div>
+
+        <div class="team-card team-support">
+          <div class="team-avatar">
+            <div class="team-avatar-inner">Sa</div>
+            <div class="team-avatar-ring"></div>
+          </div>
+          <div class="team-info">
+            <span class="team-badge support">Supporter</span>
+            <h3 class="team-name">Sakarua</h3>
+            <p class="team-desc">Erster Ansprechpartner für die Community. Hilft bei Fragen und Bewerbungen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CAR SHOWCASE ══════════════════════ -->
+  <section id="cars" class="section section-alt">
+    <div class="container">
+      <div class="section-label">CUSTOM CARS</div>
+      <h2 class="section-title">Die <span class="text-blue">Flotte</span></h2>
+      <p class="section-sub">Handverlesene Fahrzeuge von Car-Dev Devin — jedes einzeln optimiert für FiveM.</p>
+
+      <div class="cars-grid">
+        <div class="car-card car-muscle">
+          <div class="car-category">Muscle</div>
+          <div class="car-visual">
+            <svg class="car-silhouette" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8 34 C8 34 12 20 24 16 L38 12 C44 10 52 10 62 12 L82 16 C94 18 106 28 112 34 L114 38 C114 40 112 42 110 42 L10 42 C8 42 6 40 6 38 Z"
+                fill="rgba(255,107,26,0.12)" stroke="#FF6B1A" stroke-width="1.5" />
+              <circle cx="26" cy="42" r="8" fill="rgba(255,107,26,0.1)" stroke="#FF6B1A" stroke-width="1.5" />
+              <circle cx="94" cy="42" r="8" fill="rgba(255,107,26,0.1)" stroke="#FF6B1A" stroke-width="1.5" />
+              <path d="M38 12 L44 6 L76 6 L82 12" stroke="#FF6B1A" stroke-width="1.2" fill="rgba(255,107,26,0.06)" />
+              <line x1="44" y1="6" x2="76" y2="6" stroke="rgba(255,107,26,0.4)" stroke-width="0.8" />
+              <rect x="48" y="26" width="24" height="2" rx="1" fill="rgba(255,107,26,0.3)" />
+            </svg>
+            <div class="car-glow car-glow-orange"></div>
+          </div>
+          <div class="car-stats">
+            <div class="car-stat-item"><span class="car-stat-label">Typ</span><span class="car-stat-val">Muscle</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Speed</span><span class="car-stat-val">★★★★☆</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Style</span><span class="car-stat-val">★★★★★</span>
+            </div>
+          </div>
+          <div class="car-count">24 Modelle</div>
+        </div>
+
+        <div class="car-card car-super">
+          <div class="car-category">Supercar</div>
+          <div class="car-visual">
+            <svg class="car-silhouette" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6 36 C6 36 14 22 28 18 L46 13 C54 11 64 11 74 13 L88 17 C100 21 110 30 114 36 L115 38 C115 40 113 42 111 42 L9 42 C7 42 5 40 5 38 Z"
+                fill="rgba(26,159,255,0.12)" stroke="#1A9FFF" stroke-width="1.5" />
+              <circle cx="28" cy="42" r="8" fill="rgba(26,159,255,0.1)" stroke="#1A9FFF" stroke-width="1.5" />
+              <circle cx="94" cy="42" r="8" fill="rgba(26,159,255,0.1)" stroke="#1A9FFF" stroke-width="1.5" />
+              <path d="M42 13 L50 4 L72 4 L80 13" stroke="#1A9FFF" stroke-width="1.2" fill="rgba(26,159,255,0.06)" />
+              <line x1="50" y1="4" x2="72" y2="4" stroke="rgba(26,159,255,0.5)" stroke-width="0.8" />
+              <path d="M100 36 L108 28" stroke="rgba(26,159,255,0.4)" stroke-width="1" stroke-dasharray="2 2" />
+            </svg>
+            <div class="car-glow car-glow-blue"></div>
+          </div>
+          <div class="car-stats">
+            <div class="car-stat-item"><span class="car-stat-label">Typ</span><span class="car-stat-val">Supercar</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Speed</span><span class="car-stat-val">★★★★★</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Style</span><span class="car-stat-val">★★★★★</span>
+            </div>
+          </div>
+          <div class="car-count">38 Modelle</div>
+        </div>
+
+        <div class="car-card car-offroad">
+          <div class="car-category">Offroad</div>
+          <div class="car-visual">
+            <svg class="car-silhouette" viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="20" width="104" height="22" rx="4" fill="rgba(26,159,255,0.08)" stroke="#1A9FFF"
+                stroke-width="1.5" />
+              <rect x="14" y="8" width="92" height="16" rx="3" fill="rgba(26,159,255,0.06)" stroke="#1A9FFF"
+                stroke-width="1.2" />
+              <circle cx="26" cy="44" r="8" fill="rgba(26,159,255,0.1)" stroke="#1A9FFF" stroke-width="1.5" />
+              <circle cx="94" cy="44" r="8" fill="rgba(26,159,255,0.1)" stroke="#1A9FFF" stroke-width="1.5" />
+              <line x1="8" y1="20" x2="112" y2="20" stroke="rgba(26,159,255,0.3)" stroke-width="1" />
+              <rect x="46" y="10" width="28" height="6" rx="1" fill="rgba(26,159,255,0.15)"
+                stroke="rgba(26,159,255,0.3)" stroke-width="0.8" />
+            </svg>
+            <div class="car-glow car-glow-blue"></div>
+          </div>
+          <div class="car-stats">
+            <div class="car-stat-item"><span class="car-stat-label">Typ</span><span class="car-stat-val">Offroad /
+                SUV</span></div>
+            <div class="car-stat-item"><span class="car-stat-label">Speed</span><span class="car-stat-val">★★★☆☆</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Style</span><span class="car-stat-val">★★★★☆</span>
+            </div>
+          </div>
+          <div class="car-count">18 Modelle</div>
+        </div>
+
+        <div class="car-card car-motorcycle">
+          <div class="car-category">Motorrad</div>
+          <div class="car-visual">
+            <svg class="car-silhouette" viewBox="0 0 120 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="40" r="12" fill="rgba(255,107,26,0.08)" stroke="#FF6B1A" stroke-width="1.5" />
+              <circle cx="90" cy="40" r="12" fill="rgba(255,107,26,0.08)" stroke="#FF6B1A" stroke-width="1.5" />
+              <path d="M30 40 L48 24 L64 22 L80 26 L90 40" fill="rgba(255,107,26,0.06)" stroke="#FF6B1A"
+                stroke-width="1.5" />
+              <path d="M50 24 L60 10 L72 10 L78 24" fill="rgba(255,107,26,0.05)" stroke="rgba(255,107,26,0.6)"
+                stroke-width="1" />
+              <circle cx="60" cy="34" r="4" fill="rgba(255,107,26,0.2)" stroke="#FF6B1A" stroke-width="1" />
+            </svg>
+            <div class="car-glow car-glow-orange"></div>
+          </div>
+          <div class="car-stats">
+            <div class="car-stat-item"><span class="car-stat-label">Typ</span><span class="car-stat-val">Motorrad</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Speed</span><span class="car-stat-val">★★★★★</span>
+            </div>
+            <div class="car-stat-item"><span class="car-stat-label">Style</span><span class="car-stat-val">★★★★☆</span>
+            </div>
+          </div>
+          <div class="car-count">22 Modelle</div>
+        </div>
+
+        <div class="car-card car-lowrider car-wide">
+          <div class="car-category">Fan Favorite</div>
+          <div class="car-visual">
+            <svg class="car-silhouette" viewBox="0 0 200 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 36 C10 36 20 24 38 20 L68 14 C78 12 92 12 112 14 L140 20 C158 24 178 32 188 36 L190 39 C190 41 188 43 186 43 L12 43 C10 43 8 41 8 39 Z"
+                fill="rgba(255,107,26,0.12)" stroke="#FF6B1A" stroke-width="1.5" />
+              <circle cx="40" cy="43" r="9" fill="rgba(255,107,26,0.1)" stroke="#FF6B1A" stroke-width="1.5" />
+              <circle cx="160" cy="43" r="9" fill="rgba(255,107,26,0.1)" stroke="#FF6B1A" stroke-width="1.5" />
+              <path d="M62 14 L70 4 L130 4 L138 14" stroke="#FF6B1A" stroke-width="1.2" fill="rgba(255,107,26,0.06)" />
+              <line x1="70" y1="4" x2="130" y2="4" stroke="rgba(255,107,26,0.5)" stroke-width="0.8" />
+              <line x1="40" y1="36" x2="160" y2="36" stroke="rgba(255,107,26,0.2)" stroke-width="0.8"
+                stroke-dasharray="4 4" />
+            </svg>
+            <div class="car-glow car-glow-orange"></div>
+          </div>
+          <div class="car-stats">
+            <div class="car-stat-item"><span class="car-stat-label">Von</span><span class="car-stat-val">Car-Dev
+                Devin</span></div>
+            <div class="car-stat-item"><span class="car-stat-label">Total</span><span class="car-stat-val">150+
+                Fahrzeuge</span></div>
+            <div class="car-stat-item"><span class="car-stat-label">Optimiert</span><span class="car-stat-val">Ja,
+                100%</span></div>
+          </div>
+          <div class="car-count">Lowrider &amp; Classics</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ ROADMAP ══════════════════════ -->
+  <section id="roadmap" class="section section-alt">
+    <div class="container">
+      <div class="section-label">TRANSPARENZ</div>
+      <h2 class="section-title">Entwicklungs-<span class="text-orange">Roadmap</span></h2>
+      <p class="section-sub">Was wir bauen — und was schon fertig ist.</p>
+
+      <div class="roadmap-timeline">
+        <div class="roadmap-item completed">
+          <div class="roadmap-node">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-phase">Phase 1 — Fertig</span>
+            <h3>Grundstruktur & Framework</h3>
+            <p>Server-Setup, Basisframework, Datenbankstruktur und Kernlogik.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item completed">
+          <div class="roadmap-node">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-phase">Phase 2 — Fertig</span>
+            <h3>Character & Identity System</h3>
+            <p>Charaktererstellung, Kleidungssystem und Identitätsdokumente.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item in-progress">
+          <div class="roadmap-node">
+            <div class="roadmap-node-pulse"></div>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-phase">Phase 3 — In Arbeit</span>
+            <h3>Wirtschaft & Jobs</h3>
+            <p>Finanzystem, legale und illegale Berufe, Shops und Marktmechaniken.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item in-progress">
+          <div class="roadmap-node">
+            <div class="roadmap-node-pulse"></div>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-phase">Phase 4 — In Arbeit</span>
+            <h3>Custom Fahrzeuge Integration</h3>
+            <p>Alle Custom Cars von Devin werden integriert, optimiert und getestet.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item planned">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-content">
+            <span class="roadmap-phase">Phase 5 — Geplant</span>
+            <h3>Beta Test & Whitelist</h3>
+            <p>Interne Beta, Bug Fixes, Balance-Anpassungen und erste Whitelist-Bewerbungen.</p>
+          </div>
+        </div>
+
+        <div class="roadmap-item planned">
+          <div class="roadmap-node"></div>
+          <div class="roadmap-content">
+            <span class="roadmap-phase">Phase 6 — Geplant</span>
+            <h3>Public Launch 🚀</h3>
+            <p>Offizielle Eröffnung von Horizon District. Server geht live!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CITY DISTRICTS ══════════════════════ -->
+  <section id="districts" class="section">
+    <div class="container">
+      <div class="section-label">DIE STADT</div>
+      <h2 class="section-title">Horizon <span class="text-orange">Districts</span></h2>
+      <p class="section-sub">Los Santos, wie du es noch nicht gekannt hast — jeder Winkel erzählt eine Geschichte.</p>
+
+      <div class="districts-grid">
+        <div class="district-card district-vinewood">
+          <div class="district-header">
+            <span class="district-label">Vinewood Hills</span>
+            <span class="district-danger low">Sicher</span>
+          </div>
+          <h3>Die Reichen &amp; Schönen</h3>
+          <p>Villen, Yachten, Luxuskarossen. Hier wohnen die Politiker, die Top-Anwälte und die seriösen Unternehmer.
+            Sauber nach außen — nicht immer nach innen.</p>
+          <div class="district-tags">
+            <span>🏙️ High-End</span>
+            <span>💼 Business</span>
+            <span>🏠 Immobilien</span>
+          </div>
+        </div>
+
+        <div class="district-card district-southside">
+          <div class="district-header">
+            <span class="district-label">Southside</span>
+            <span class="district-danger high">Gefährlich</span>
+          </div>
+          <h3>Das Herz des Untergrunds</h3>
+          <p>Enge Gassen, laute Musik, kein Netz für die Cops. Die Southside gehört den Gangs. Drogenrouten, Turf Wars
+            und echte Straßenkultur — wer hier überlebt, hat was zu erzählen.</p>
+          <div class="district-tags">
+            <span>💀 Gang Territory</span>
+            <span>🔫 Straße</span>
+            <span>🚗 Tuning</span>
+          </div>
+        </div>
+
+        <div class="district-card district-downtown">
+          <div class="district-header">
+            <span class="district-label">Downtown LS</span>
+            <span class="district-danger mid">Mittel</span>
+          </div>
+          <h3>Das Zentrum pulsiert</h3>
+          <p>Banken, Gerichte, Polizeiwache und der größte Marktplatz der Stadt. Hier kreuzen sich alle Wege — der
+            Staatsdiener und der Kriminelle sitzen manchmal am selben Tresen.</p>
+          <div class="district-tags">
+            <span>🏦 Banken</span>
+            <span>⚖️ Justiz</span>
+            <span>🛒 Markt</span>
+          </div>
+        </div>
+
+        <div class="district-card district-port">
+          <div class="district-header">
+            <span class="district-label">Puerto Del Sol</span>
+            <span class="district-danger high">Hochrisiko</span>
+          </div>
+          <h3>Der Hafen schläft nie</h3>
+          <p>Container, Schmuggel, Schwarzmarkt. Der Hafen ist das Tor zur Unterwelt. Wer hier Deals macht, muss schnell
+            sein — und schweigen können.</p>
+          <div class="district-tags">
+            <span>⚓ Hafen</span>
+            <span>📦 Schmuggel</span>
+            <span>🌒 Nacht</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ COMMUNITY / DISCORD ══════════════════════ -->
+  <section id="community" class="section">
+    <div class="container">
+      <div class="section-label">COMMUNITY</div>
+      <h2 class="section-title">Join unseren <span class="text-blue">Discord</span></h2>
+      <p class="section-sub">Bleib immer auf dem neuesten Stand — Infos, Bewerbungen und Community.</p>
+
+      <div class="discord-layout">
+        <div class="discord-widget-wrap">
+          <iframe src="https://discord.com/widget?id=1479555991547940954&theme=dark" width="350" height="500"
+            allowtransparency="true" frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            title="Horizon District Discord" loading="lazy"></iframe>
+        </div>
+
+        <div class="discord-info">
+          <div class="discord-features">
+            <div class="dc-feature">
+              <div class="dc-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3z" />
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                </svg>
+              </div>
+              <div>
+                <h4>Ankündigungen</h4>
+                <p>Alle Updates & News direkt im Discord</p>
+              </div>
+            </div>
+            <div class="dc-feature">
+              <div class="dc-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <div>
+                <h4>Bewerbungen</h4>
+                <p>Whitelist-Bewerbungen über den Discord</p>
+              </div>
+            </div>
+            <div class="dc-feature">
+              <div class="dc-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div>
+                <h4>Community</h4>
+                <p>Triff andere Spieler und vernetze dich</p>
+              </div>
+            </div>
+            <div class="dc-feature">
+              <div class="dc-feature-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </div>
+              <div>
+                <h4>Support</h4>
+                <p>Hilfe bei technischen Fragen & Problemen</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener" class="btn-primary discord-cta-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+            </svg>
+            Jetzt Discord beitreten
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ JOIN STEPS ══════════════════════ -->
+  <section id="join" class="section section-alt">
+    <div class="container">
+      <div class="section-label">SO GEHT'S</div>
+      <h2 class="section-title">In <span class="text-orange">3 Schritten</span> starten</h2>
+      <p class="section-sub">Einfacher geht's nicht — so kommst du auf Horizon District.</p>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">01</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3>FiveM installieren</h3>
+          <p>Lade FiveM von <strong>fivem.net</strong> herunter und installiere es. GTA V wird benötigt.</p>
+          <a href="https://fivem.net" target="_blank" rel="noopener" class="step-link">
+            fivem.net
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="step-connector">
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <path d="M0 10 H40" stroke="url(#stepGrad)" stroke-width="2" stroke-dasharray="4 4" />
+            <defs>
+              <linearGradient id="stepGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#1A9FFF" />
+                <stop offset="100%" stop-color="#FF6B1A" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">02</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+            </svg>
+          </div>
+          <h3>Discord beitreten</h3>
+          <p>Tritt unserem Discord bei und stelle eine Whitelist-Bewerbung. Unser Support-Team meldet sich.</p>
+          <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener" class="step-link">
+            Discord beitreten
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+              <polyline points="15 3 21 3 21 9" />
+              <line x1="10" y1="14" x2="21" y2="3" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="step-connector">
+          <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <path d="M0 10 H40" stroke="url(#stepGrad2)" stroke-width="2" stroke-dasharray="4 4" />
+            <defs>
+              <linearGradient id="stepGrad2" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#FF6B1A" />
+                <stop offset="100%" stop-color="#1A9FFF" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">03</div>
+          <div class="step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+          </div>
+          <h3>Server connecten</h3>
+          <p>Nach Freigabe einfach auf "Server connecten" klicken — und dein neues Leben in Horizon District beginnt.
+          </p>
+          <button class="step-link" onclick="document.getElementById('status').scrollIntoView({behavior:'smooth'})">
+            Zum Server
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ REGELWERK ══════════════════════ -->
+  <section id="rules" class="section">
+    <div class="container">
+      <div class="section-label">WICHTIG</div>
+      <h2 class="section-title">Regel<span class="text-blue">werk</span></h2>
+      <p class="section-sub">Die wichtigsten Regeln für ein faires Miteinander. Vollständige Regeln im Discord.</p>
+
+      <div class="rules-grid">
+        <div class="rule-card">
+          <span class="rule-number">§1</span>
+          <h4>Respektvoller Umgang</h4>
+          <p>Behandle alle Spieler mit Respekt. Beleidigungen, Diskriminierung und Harassment sind verboten.</p>
+        </div>
+        <div class="rule-card">
+          <span class="rule-number">§2</span>
+          <h4>Realitätstreues RP</h4>
+          <p>Dein Charakter muss sich realistisch verhalten. Powergaming, Metagaming und RDM sind verboten.</p>
+        </div>
+        <div class="rule-card">
+          <span class="rule-number">§3</span>
+          <h4>Value of Life</h4>
+          <p>Dein Charakter schätzt sein Leben. Lebensgefährliche Situationen müssen ernst genommen werden.</p>
+        </div>
+        <div class="rule-card">
+          <span class="rule-number">§4</span>
+          <h4>Kein Cheating</h4>
+          <p>Jegliche Mods, Cheats oder Exploits sind strikt verboten und führen zum permanenten Bann.</p>
+        </div>
+        <div class="rule-card">
+          <span class="rule-number">§5</span>
+          <h4>New Life Rule</h4>
+          <p>Nach dem Tod vergisst dein Charakter alle Ereignisse, die zu seinem Tod geführt haben.</p>
+        </div>
+        <div class="rule-card rule-full">
+          <div class="rule-cta-content">
+            <span class="rule-number">📋</span>
+            <div>
+              <h4>Vollständiges Regelwerk</h4>
+              <p>Das komplette Regelwerk mit allen Details, Ausnahmen und Konsequenzen findest du in unserem Discord.
+              </p>
+            </div>
+            <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener" class="btn-secondary">Im Discord
+              lesen</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ FOOTER ══════════════════════ -->
+  <footer id="footer">
+    <div class="footer-glow"></div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="logo.png" alt="Horizon District" class="footer-logo-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="footer-logo-fallback">
+              <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
+                <rect x="4" y="8" width="10" height="16" stroke="#1A9FFF" stroke-width="2" fill="none" />
+                <rect x="18" y="8" width="10" height="16" stroke="#1A9FFF" stroke-width="2" fill="none" />
+                <rect x="11" y="12" width="10" height="8" stroke="#FF6B1A" stroke-width="1.5" fill="none" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <span class="footer-brand-name">Horizon District</span>
+            <p class="footer-brand-tagline">Deutscher FiveM Roleplay Server</p>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Navigation</h5>
+            <ul>
+              <li><a href="#status">Server Status</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Community</h5>
+            <ul>
+              <li><a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener">Discord</a></li>
+              <li><a href="#join">Beitreten</a></li>
+              <li><a href="#rules">Regelwerk</a></li>
+              <li><a href="#community">Community</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Team</h5>
+            <ul>
+              <li><span>xBerry — Owner</span></li>
+              <li><span>Staubi — Main Dev</span></li>
+              <li><span>Devin — Car Dev</span></li>
+              <li><span>KratomAtom — Leitung</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 Horizon District. Alle Rechte vorbehalten.</p>
+        <p class="footer-disclaimer">Horizon District ist kein offizielles Rockstar Games oder FiveM Produkt.</p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener" aria-label="Discord"
+            class="footer-social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
