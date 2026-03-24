@@ -15,9 +15,10 @@ const CFX_CODE = "6abpq7";
 const DISCORD_GUILD_ID = "1479555991547940954";
 
 // Discord Server-Icon URL
-// Rechtsklick auf dein Server-Icon in Discord → „Profilbild kopieren" → URL hier eintragen
-// Alternativ: https://cdn.discordapp.com/icons/GUILD_ID/ICON_HASH.png?size=128
-const DISCORD_GUILD_ICON_URL = "https://cdn.discordapp.com/attachments/1479561871504703529/1479573809395667005/HorizonDistrict.jpeg?ex=69c2f17d&is=69c19ffd&hm=5177ec37c165799282931f317e5e6fc57571b840af9f9a02fb304a3fed545119&";
+// Permanente URL: https://cdn.discordapp.com/icons/GUILD_ID/ICON_HASH.png?size=128
+// Den ICON_HASH bekommst du via Discord Bot oder Rechtsklick auf Server-Icon → Link kopieren (nicht Attachment-Link!)
+// Attachment-Links (cdn.discordapp.com/attachments/...) laufen nach wenigen Tagen ab — nicht verwenden!
+const DISCORD_GUILD_ICON_URL = ""; // ← permanente Icon-URL hier eintragen
 
 /* ── NAVBAR SCROLL ──────────────────────────────────────── */
 const navbar = document.getElementById("navbar");
