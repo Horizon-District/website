@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Impressum — Horizon District</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .impressum-page {
+      min-height: 100vh;
+      padding: 120px 0 80px;
+      background: var(--bg-base);
+    }
+    .impressum-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: rgba(10, 20, 35, 0.85);
+      border: 1px solid rgba(0, 224, 255, 0.14);
+      border-radius: 18px;
+      padding: 48px 52px;
+      position: relative;
+      backdrop-filter: blur(12px);
+    }
+    .impressum-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--hd-blue), transparent);
+      border-radius: 18px 18px 0 0;
+    }
+    .impressum-label {
+      font-family: var(--font-display);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--hd-blue);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .impressum-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 36px;
+      letter-spacing: 0.04em;
+    }
+    .impressum-section {
+      margin-bottom: 32px;
+    }
+    .impressum-section h2 {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--hd-blue);
+      text-transform: uppercase;
+      margin: 0 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(0, 224, 255, 0.1);
+    }
+    .impressum-section p,
+    .impressum-section address {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-style: normal;
+      margin: 0;
+    }
+    .impressum-section a {
+      color: var(--hd-blue);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .impressum-section a:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+    }
+    .impressum-placeholder {
+      background: rgba(0, 224, 255, 0.04);
+      border: 1px dashed rgba(0, 224, 255, 0.25);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      color: rgba(0, 224, 255, 0.5);
+      font-style: italic;
+      margin-top: 6px;
+    }
+    .impressum-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .impressum-back:hover { color: var(--hd-blue); }
+    .impressum-back svg { flex-shrink: 0; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="scrolled">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Horizon District Logo" class="nav-logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="nav-logo-fallback">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect x="4" y="8" width="10" height="16" stroke="#1A9FFF" stroke-width="2" fill="none" />
+            <rect x="18" y="8" width="10" height="16" stroke="#1A9FFF" stroke-width="2" fill="none" />
+            <rect x="11" y="12" width="10" height="8" stroke="#FF6B1A" stroke-width="1.5" fill="none" />
+          </svg>
+        </div>
+        <span class="nav-brand">Horizon<span class="nav-brand-accent">District</span></span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn-discord">← Zurück</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- IMPRESSUM -->
+  <main class="impressum-page">
+    <div class="container">
+      <div class="impressum-card">
+
+        <a href="index.html" class="impressum-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+          </svg>
+          Zurück zur Hauptseite
+        </a>
+
+        <div class="impressum-label">Rechtliches</div>
+        <h1 class="impressum-title">Impressum</h1>
+
+        <!-- ── Angaben gemäß § 5 TMG ── -->
+        <div class="impressum-section">
+          <h2>Angaben gemäß § 5 TMG</h2>
+          <address>
+            <!-- TODO: Vor- und Nachname eintragen -->
+            <strong style="color: var(--text-primary);">Vorname Nachname</strong><br />
+            <!-- TODO: Straße und Hausnummer eintragen -->
+            Musterstraße 1<br />
+            <!-- TODO: PLZ und Stadt eintragen -->
+            12345 Musterstadt<br />
+            Deutschland
+          </address>
+          <div class="impressum-placeholder">← Bitte mit echten Daten ersetzen (Pflichtangabe nach TMG)</div>
+        </div>
+
+        <!-- ── Kontakt ── -->
+        <div class="impressum-section">
+          <h2>Kontakt</h2>
+          <p>
+            <!-- TODO: E-Mail-Adresse eintragen -->
+            E-Mail: <a href="mailto:kontakt@beispiel.de">kontakt@beispiel.de</a><br />
+            Discord: <a href="https://discord.gg/SJpPEtrmrq" target="_blank" rel="noopener">discord.gg/SJpPEtrmrq</a>
+          </p>
+        </div>
+
+        <!-- ── Verantwortlich für den Inhalt ── -->
+        <div class="impressum-section">
+          <h2>Verantwortlich für den Inhalt (§ 18 Abs. 2 MStV)</h2>
+          <p>
+            <!-- TODO: Namen der verantwortlichen Person eintragen -->
+            Vorname Nachname<br />
+            Musterstraße 1<br />
+            12345 Musterstadt
+          </p>
+          <div class="impressum-placeholder">← Gleiche Person wie oben, sofern keine Organisation</div>
+        </div>
+
+        <!-- ── Haftungsausschluss ── -->
+        <div class="impressum-section">
+          <h2>Haftungsausschluss</h2>
+          <p>
+            Horizon District ist ein privates Hobby-Projekt und steht in keiner Verbindung zu Rockstar Games, Take-Two Interactive oder dem FiveM-Projekt (Cfx.re). Alle Markennamen und Logos sind Eigentum ihrer jeweiligen Inhaber.
+          </p>
+          <p style="margin-top: 10px;">
+            Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen.
+          </p>
+        </div>
+
+        <!-- ── Urheberrecht ── -->
+        <div class="impressum-section">
+          <h2>Urheberrecht</h2>
+          <p>
+            Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          </p>
+        </div>
+
+        <p style="font-family: var(--font-body); font-size: 12px; color: var(--text-muted); margin-top: 8px;">
+          Stand: März 2026
+        </p>
+
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
